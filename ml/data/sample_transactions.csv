@@ -1,36 +1,379 @@
 date,description,amount
-2026-02-01 09:15,McDonalds lunch,12.50
-2026-02-02 08:30,Uber trip downtown,24.00
-2026-02-03 20:00,Netflix subscription,15.99
-2026-02-04 11:20,Walmart groceries,87.34
-2026-02-05 08:45,Starbucks coffee,6.75
-2026-02-06 17:30,Shell gas station,54.20
-2026-02-07 14:00,Amazon purchase,43.99
-2026-02-08 10:10,CVS pharmacy,22.10
-2026-02-09 19:30,Chipotle dinner,14.25
-2026-02-10 08:20,Lyft ride,18.50
-2026-02-11 20:00,Spotify premium,9.99
-2026-02-12 13:45,Target store,65.80
-2026-02-13 19:00,Dominos pizza,28.99
-2026-02-14 09:00,Delta airlines ticket,380.00
-2026-02-15 08:30,Starbucks coffee,7.25
-2026-02-16 20:15,Uber eats delivery,34.50
-2026-02-17 20:00,Apple icloud,2.99
-2026-02-18 15:00,Best buy electronics,249.99
-2026-02-19 12:30,Subway sandwich,9.80
-2026-02-20 10:00,Walgreens prescription,18.40
-2026-02-21 19:45,Grubhub order,41.75
-2026-02-22 17:00,BP fuel,61.30
-2026-02-23 20:00,Hulu monthly,17.99
-2026-02-24 14:30,Zara clothing,120.00
-2026-02-25 11:00,Urgent care visit,150.00
-2026-02-26 08:15,Dunkin donuts,5.50
-2026-02-27 09:00,Parking meter,8.00
-2026-02-28 20:00,Adobe creative,54.99
-2026-03-01 09:10,McDonalds lunch,13.00
-2026-03-02 03:15,Hospital bill,1200.00
-2026-03-03 20:00,Amazon prime,14.99
-2026-03-04 08:45,Uber trip,22.00
-2026-03-05 11:30,Walmart groceries,93.10
-2026-03-06 14:00,Freelance payment,500.00
-2026-03-07 09:00,Starbucks coffee,6.50
+2025-10-01 11:47,Subway sandwich,8.98
+2025-10-02 08:01,CVS pharmacy,26.81
+2025-10-03 13:45,Metro card,33.01
+2025-10-04 07:48,Metro card,31.39
+2025-10-04 08:46,Apple music,10.99
+2025-10-04 15:09,Microsoft 365,9.99
+2025-10-04 19:06,Shell gas station,47.04
+2025-10-05 09:02,Home depot,99.28
+2025-10-05 14:55,Planet fitness,10.0
+2025-10-05 16:53,Nike store,67.09
+2025-10-05 18:10,Subway sandwich,9.81
+2025-10-06 09:38,Disney plus,13.99
+2025-10-06 14:43,Cashback reward,18.76
+2025-10-06 19:17,Costco,99.61
+2025-10-07 08:51,Venmo transfer,38.32
+2025-10-07 17:13,Shell gas station,46.32
+2025-10-07 21:09,Dental clinic,186.16
+2025-10-08 11:32,Home depot,56.32
+2025-10-08 11:40,Walmart groceries,105.14
+2025-10-08 20:57,Grubhub order,39.86
+2025-10-09 07:43,Zara clothing,107.62
+2025-10-09 19:24,Rent payment,1100.0
+2025-10-10 17:07,Planet fitness,10.0
+2025-10-11 12:34,Costco,98.34
+2025-10-11 15:32,AMC theaters,14.03
+2025-10-11 16:53,Adobe creative,54.99
+2025-10-12 18:56,Zara clothing,61.75
+2025-10-13 09:05,Lyft ride,23.17
+2025-10-13 11:08,Dropbox,11.99
+2025-10-13 20:13,Walgreens prescription,26.63
+2025-10-14 14:04,PayPal transfer,40.13
+2025-10-14 18:28,Dental clinic,199.42
+2025-10-15 08:55,Starbucks coffee,6.73
+2025-10-15 14:00,Grubhub order,33.06
+2025-10-15 22:13,Metro card,31.19
+2025-10-16 20:22,Spotify premium,9.99
+2025-10-16 22:51,Dental clinic,109.16
+2025-10-17 09:28,Lyft ride,23.12
+2025-10-17 10:03,Netflix subscription,15.99
+2025-10-17 10:15,Apple music,10.99
+2025-10-17 20:11,Grubhub order,37.87
+2025-10-18 09:59,Grubhub order,46.39
+2025-10-19 19:16,Dunkin donuts,4.01
+2025-10-19 19:57,Uber eats delivery,34.63
+2025-10-20 08:47,Dominos pizza,31.56
+2025-10-20 09:38,Paycheck direct deposit,2370.27
+2025-10-20 12:03,Uber trip,21.35
+2025-10-20 22:09,Parking garage,19.49
+2025-10-21 14:37,Walgreens prescription,30.09
+2025-10-22 17:59,Nike store,119.16
+2025-10-23 09:00,Subway sandwich,9.83
+2025-10-23 13:32,Spotify premium,9.99
+2025-10-23 15:25,Parking garage,11.77
+2025-10-24 14:23,Panera bread,15.4
+2025-10-24 16:39,BP fuel,56.67
+2025-10-24 16:59,Cashback reward,15.58
+2025-10-25 10:47,Paycheck direct deposit,2252.89
+2025-10-26 15:57,Planet fitness,10.0
+2025-10-26 17:13,Metro card,31.05
+2025-10-27 08:00,Dunkin donuts,6.49
+2025-10-28 08:53,Cashback reward,23.08
+2025-10-28 10:04,Youtube premium,13.99
+2025-10-28 12:47,Microsoft 365,9.99
+2025-10-29 08:19,Amazon purchase,65.83
+2025-10-29 13:43,Netflix subscription,15.99
+2025-10-29 20:39,Uber trip,17.66
+2025-10-30 12:56,Paycheck direct deposit,2372.92
+2025-10-30 17:50,Hulu monthly,17.99
+2025-10-31 08:54,McDonalds lunch,11.53
+2025-10-31 13:25,Lyft ride,13.34
+2025-10-31 14:17,Dropbox,11.99
+2025-10-31 21:22,Costco,177.99
+2025-11-01 15:02,Subway sandwich,8.71
+2025-11-01 15:22,Uber trip,27.47
+2025-11-01 17:01,Nike store,121.16
+2025-11-02 17:27,Home depot,117.43
+2025-11-03 20:00,Amazon prime,14.99
+2025-11-04 16:32,Uber trip,23.52
+2025-11-04 17:39,Spotify premium,9.99
+2025-11-05 16:25,Verizon bill,87.31
+2025-11-05 16:35,Planet fitness,10.0
+2025-11-05 19:43,Dunkin donuts,5.99
+2025-11-06 17:29,Lyft ride,16.45
+2025-11-07 12:42,Amazon prime,14.99
+2025-11-07 14:30,Verizon bill,75.49
+2025-11-07 16:14,Dropbox,11.99
+2025-11-07 17:05,Grubhub order,42.6
+2025-11-08 19:31,Amazon prime,14.99
+2025-11-09 10:49,Parking garage,16.25
+2025-11-09 21:03,Hulu monthly,17.99
+2025-11-09 21:39,Home depot,144.0
+2025-11-09 21:42,Target store,65.54
+2025-11-10 15:28,Rent payment,1100.0
+2025-11-10 15:49,Lyft ride,22.6
+2025-11-10 17:20,Subway sandwich,8.94
+2025-11-10 22:28,PayPal transfer,137.15
+2025-11-11 11:45,Dominos pizza,23.36
+2025-11-12 07:54,Dunkin donuts,5.17
+2025-11-12 21:26,Dunkin donuts,4.99
+2025-11-13 14:31,PayPal transfer,92.28
+2025-11-13 19:21,BP fuel,49.71
+2025-11-13 19:54,Home depot,65.83
+2025-11-13 21:58,Dental clinic,166.9
+2025-11-14 19:37,Cashback reward,5.54
+2025-11-14 20:08,Walmart groceries,77.94
+2025-11-15 08:22,PayPal transfer,27.42
+2025-11-15 08:48,Uber trip,24.5
+2025-11-15 13:29,Subway sandwich,9.52
+2025-11-15 20:16,BP fuel,45.57
+2025-11-16 11:15,Paycheck direct deposit,2367.85
+2025-11-17 10:49,Planet fitness,10.0
+2025-11-17 13:29,Target store,70.38
+2025-11-18 13:04,Dental clinic,127.6
+2025-11-18 16:36,Paycheck direct deposit,2315.74
+2025-11-19 10:50,Subway sandwich,11.4
+2025-11-19 20:42,Paycheck direct deposit,2269.44
+2025-11-20 15:39,Chipotle dinner,14.94
+2025-11-20 20:52,Panera bread,11.06
+2025-11-20 21:45,Nike store,146.47
+2025-11-21 14:48,Freelance payment,740.82
+2025-11-21 14:53,Disney plus,13.99
+2025-11-21 15:21,BP fuel,44.24
+2025-11-21 22:54,Youtube premium,13.99
+2025-11-22 07:05,Zara clothing,100.34
+2025-11-22 13:05,ATM withdrawal,137.81
+2025-11-22 14:44,BP fuel,49.77
+2025-11-23 14:07,Planet fitness,10.0
+2025-11-23 17:22,Home depot,81.06
+2025-11-23 18:30,Parking garage,10.92
+2025-11-24 12:12,Parking garage,14.43
+2025-11-24 16:06,BP fuel,45.53
+2025-11-25 07:45,Shell gas station,48.59
+2025-11-25 08:35,Best buy,61.38
+2025-11-26 21:21,ATM withdrawal,125.72
+2025-11-26 22:06,Walgreens prescription,35.95
+2025-11-26 22:07,Starbucks coffee,6.75
+2025-11-27 08:09,Spotify premium,9.99
+2025-11-28 14:07,Electric bill,85.11
+2025-11-28 14:49,Nike store,114.57
+2025-11-29 07:26,Metro card,30.38
+2025-11-29 09:10,Lyft ride,13.97
+2025-11-29 10:48,Walmart groceries,96.34
+2025-11-29 20:19,AMC theaters,16.38
+2025-11-30 13:27,Parking garage,15.08
+2025-11-30 14:18,Dental clinic,114.95
+2025-11-30 14:59,Dental clinic,88.54
+2025-11-30 15:52,Dominos pizza,27.07
+2025-12-01 15:32,Subway sandwich,10.8
+2025-12-01 16:28,Chipotle dinner,15.17
+2025-12-02 07:48,Uber trip,15.66
+2025-12-02 12:30,Planet fitness,10.0
+2025-12-02 12:37,Zara clothing,142.45
+2025-12-02 17:38,Netflix subscription,15.99
+2025-12-03 12:21,Apple music,10.99
+2025-12-03 17:16,Comcast internet,89.99
+2025-12-03 19:52,AMC theaters,16.31
+2025-12-03 22:22,Zara clothing,147.21
+2025-12-04 07:42,Dunkin donuts,6.59
+2025-12-04 08:13,AMC theaters,19.0
+2025-12-04 13:33,PayPal transfer,76.66
+2025-12-05 10:29,Nike store,68.39
+2025-12-05 12:19,Chick fil a,13.0
+2025-12-05 22:07,Best buy,159.53
+2025-12-06 16:32,Amazon purchase,72.35
+2025-12-07 11:55,Nike store,77.15
+2025-12-07 14:29,AMC theaters,21.84
+2025-12-07 15:52,Dunkin donuts,5.02
+2025-12-08 22:55,Shell gas station,61.75
+2025-12-09 14:36,Paycheck direct deposit,2396.15
+2025-12-09 19:29,AMC theaters,16.76
+2025-12-10 11:31,Freelance payment,493.04
+2025-12-10 17:55,Paycheck direct deposit,2300.46
+2025-12-10 21:00,Uber eats delivery,26.99
+2025-12-10 22:45,BP fuel,40.87
+2025-12-11 15:21,Hulu monthly,17.99
+2025-12-11 17:54,Nike store,118.49
+2025-12-12 08:20,Subway sandwich,11.61
+2025-12-12 10:28,Rent payment,1100.0
+2025-12-12 16:14,Target store,55.56
+2025-12-12 22:55,Cashback reward,19.37
+2025-12-13 14:33,Shell gas station,53.61
+2025-12-14 07:57,Disney plus,13.99
+2025-12-14 09:39,Amazon purchase,41.15
+2025-12-14 11:14,Zelle payment,124.65
+2025-12-14 12:04,Electric bill,120.66
+2025-12-15 18:36,Costco,125.76
+2025-12-15 19:17,Parking garage,11.54
+2025-12-15 19:54,Shell gas station,48.98
+2025-12-15 20:44,Cashback reward,10.98
+2025-12-16 22:53,Walmart groceries,106.87
+2025-12-17 11:40,Best buy,219.44
+2025-12-17 18:14,Verizon bill,87.14
+2025-12-17 21:02,Starbucks coffee,6.81
+2025-12-18 15:58,Best buy,257.62
+2025-12-18 17:47,Comcast internet,89.99
+2025-12-18 18:33,Amazon prime,14.99
+2025-12-19 10:29,Comcast internet,89.99
+2025-12-19 14:55,McDonalds lunch,10.56
+2025-12-19 17:51,Freelance payment,673.28
+2025-12-19 18:05,Dental clinic,196.07
+2025-12-20 17:58,Dental clinic,83.0
+2025-12-20 18:06,Planet fitness,10.0
+2025-12-20 21:58,Target store,73.59
+2025-12-21 08:19,Target store,51.29
+2025-12-21 11:24,Paycheck direct deposit,2219.44
+2025-12-21 11:56,Youtube premium,13.99
+2025-12-22 14:54,Walgreens prescription,31.08
+2025-12-22 15:02,Dental clinic,153.88
+2025-12-22 18:03,Apple music,10.99
+2025-12-22 21:05,Amazon prime,14.99
+2025-12-23 13:37,Cashback reward,9.1
+2025-12-23 17:15,Walmart groceries,76.77
+2025-12-24 11:08,Venmo transfer,42.18
+2025-12-24 11:50,Verizon bill,81.57
+2025-12-25 07:08,Comcast internet,89.99
+2025-12-25 07:11,Dominos pizza,26.24
+2025-12-25 10:47,Lyft ride,21.13
+2025-12-26 10:28,Home depot,91.59
+2025-12-27 16:29,Paycheck direct deposit,2345.45
+2025-12-27 22:54,Walmart groceries,77.13
+2025-12-28 09:08,ATM withdrawal,145.16
+2025-12-28 17:24,Parking garage,15.02
+2025-12-28 20:06,Cashback reward,10.9
+2025-12-28 21:04,Spotify premium,9.99
+2025-12-29 14:26,Zelle payment,114.51
+2025-12-30 09:05,Paycheck direct deposit,2218.24
+2025-12-30 10:20,Rent payment,1100.0
+2025-12-30 11:43,Disney plus,13.99
+2025-12-31 08:18,Youtube premium,13.99
+2025-12-31 08:37,Panera bread,15.06
+2025-12-31 10:26,Cashback reward,11.59
+2025-12-31 13:09,Home depot,42.43
+2026-01-01 15:01,Walmart groceries,96.31
+2026-01-01 18:00,Subway sandwich,11.69
+2026-01-01 18:07,Uber trip,17.6
+2026-01-01 20:54,Adobe creative,54.99
+2026-01-02 07:05,PayPal transfer,33.7
+2026-01-02 21:21,Verizon bill,82.52
+2026-01-03 08:43,Chipotle dinner,15.02
+2026-01-03 09:56,Apple music,10.99
+2026-01-04 21:26,Parking garage,13.09
+2026-01-05 13:19,Metro card,30.27
+2026-01-05 16:02,Parking garage,15.12
+2026-01-05 20:07,Metro card,30.57
+2026-01-06 17:07,Dropbox,11.99
+2026-01-06 19:34,Dunkin donuts,4.53
+2026-01-07 08:27,Home depot,38.65
+2026-01-07 20:36,McDonalds lunch,13.45
+2026-01-08 10:15,Planet fitness,10.0
+2026-01-08 19:01,Dental clinic,114.74
+2026-01-08 19:55,Youtube premium,13.99
+2026-01-08 21:53,Paycheck direct deposit,2360.26
+2026-01-09 11:15,Electric bill,123.64
+2026-01-09 12:04,Verizon bill,81.66
+2026-01-09 13:57,Target store,68.88
+2026-01-10 11:48,Dominos pizza,20.43
+2026-01-11 21:43,Uber eats delivery,34.28
+2026-01-12 08:03,Best buy,165.44
+2026-01-12 08:22,Disney plus,13.99
+2026-01-12 09:30,ATM withdrawal,81.13
+2026-01-13 08:28,Nike store,101.64
+2026-01-13 09:39,Venmo transfer,71.57
+2026-01-13 22:32,Zelle payment,98.23
+2026-01-14 17:45,Freelance payment,351.75
+2026-01-14 21:28,Chipotle dinner,12.16
+2026-01-15 10:35,Home depot,37.91
+2026-01-15 17:43,Disney plus,13.99
+2026-01-16 09:19,Dental clinic,95.47
+2026-01-16 09:41,Home depot,127.58
+2026-01-16 11:21,Parking garage,18.22
+2026-01-16 16:41,Chipotle dinner,15.67
+2026-01-17 08:42,McDonalds lunch,12.03
+2026-01-17 11:09,BP fuel,43.84
+2026-01-17 12:13,Walmart groceries,87.69
+2026-01-17 19:09,Metro card,30.66
+2026-01-18 12:46,Chick fil a,13.05
+2026-01-18 14:28,Youtube premium,13.99
+2026-01-19 13:23,Freelance payment,751.99
+2026-01-19 14:19,Dropbox,11.99
+2026-01-19 16:49,Dental clinic,135.4
+2026-01-20 10:18,Spotify premium,9.99
+2026-01-20 11:53,Chipotle dinner,13.09
+2026-01-20 13:51,Nike store,146.96
+2026-01-20 22:55,Best buy,63.04
+2026-01-21 07:20,Spotify premium,9.99
+2026-01-21 11:08,Cashback reward,18.0
+2026-01-21 18:15,Starbucks coffee,6.9
+2026-01-21 18:59,Dominos pizza,29.43
+2026-01-22 11:48,BP fuel,53.92
+2026-01-23 07:16,Netflix subscription,15.99
+2026-01-23 08:15,Verizon bill,81.02
+2026-01-23 20:07,Lyft ride,18.23
+2026-01-23 22:38,AMC theaters,14.5
+2026-01-24 16:27,Costco,166.23
+2026-01-25 12:42,Costco,148.48
+2026-01-26 07:24,Home depot,38.12
+2026-01-27 10:49,McDonalds lunch,11.38
+2026-01-27 15:47,Dunkin donuts,6.94
+2026-01-27 18:34,Home depot,46.01
+2026-01-27 21:44,Parking garage,10.1
+2026-01-28 08:20,Uber trip,24.66
+2026-01-28 08:55,Dominos pizza,22.01
+2026-01-28 21:02,Amazon purchase,30.99
+2026-01-28 22:16,Cashback reward,12.96
+2026-01-29 12:31,Youtube premium,13.99
+2026-01-29 15:51,Planet fitness,10.0
+2026-01-29 19:47,Shell gas station,53.74
+2026-01-30 12:34,CVS pharmacy,23.61
+2026-01-31 16:19,Uber trip,17.25
+2026-01-31 20:17,Apple music,10.99
+2026-01-31 21:22,Youtube premium,13.99
+2026-02-01 12:01,Dunkin donuts,5.09
+2026-02-02 08:38,Electric bill,101.73
+2026-02-02 09:15,PayPal transfer,29.35
+2026-02-03 09:36,Planet fitness,10.0
+2026-02-03 15:15,Panera bread,12.99
+2026-02-04 19:58,Chipotle dinner,14.0
+2026-02-05 13:39,Shell gas station,59.08
+2026-02-06 11:54,Dental clinic,104.02
+2026-02-06 18:45,Dropbox,11.99
+2026-02-06 21:05,Chipotle dinner,15.59
+2026-02-07 12:45,Best buy,272.83
+2026-02-08 13:50,Adobe creative,54.99
+2026-02-08 18:29,Uber eats delivery,25.53
+2026-02-09 09:08,Dental clinic,172.3
+2026-02-09 19:45,Target store,47.96
+2026-02-10 11:19,Walmart groceries,104.1
+2026-02-10 11:27,Zelle payment,165.17
+2026-02-10 18:08,Zara clothing,101.92
+2026-02-11 15:08,Dominos pizza,26.89
+2026-02-11 16:54,Dominos pizza,22.84
+2026-02-12 07:05,Paycheck direct deposit,2365.05
+2026-02-12 12:37,Target store,67.62
+2026-02-12 17:53,Paycheck direct deposit,2234.24
+2026-02-13 13:49,Cashback reward,10.29
+2026-02-14 16:41,Walmart groceries,92.43
+2026-02-14 17:55,Apple music,10.99
+2026-02-14 19:19,Freelance payment,422.44
+2026-02-14 20:30,Netflix subscription,15.99
+2026-02-15 03:22,Hospital bill,3200.0
+2026-02-15 11:06,Disney plus,13.99
+2026-02-15 17:15,Adobe creative,54.99
+2026-02-15 19:08,Dropbox,11.99
+2026-02-16 20:15,BP fuel,57.28
+2026-02-17 13:48,Adobe creative,54.99
+2026-02-17 16:31,Grubhub order,38.27
+2026-02-18 14:13,Dunkin donuts,5.52
+2026-02-19 15:46,Target store,64.39
+2026-02-19 19:03,Youtube premium,13.99
+2026-02-19 22:18,Subway sandwich,9.98
+2026-02-20 01:45,Best buy electronics,1899.99
+2026-02-20 10:25,Target store,50.79
+2026-02-20 21:48,Disney plus,13.99
+2026-02-21 08:02,Chick fil a,11.55
+2026-02-21 18:48,Electric bill,113.47
+2026-02-21 21:09,Panera bread,15.02
+2026-02-22 19:39,Metro card,31.59
+2026-02-22 22:45,Electric bill,115.62
+2026-02-23 10:26,Walmart groceries,87.89
+2026-02-23 14:46,Dropbox,11.99
+2026-02-23 15:41,Walmart groceries,95.89
+2026-02-24 19:09,Amazon purchase,74.8
+2026-02-25 14:00,Unknown wire transfer,950.0
+2026-02-25 15:30,Unknown wire transfer,875.0
+2026-02-25 20:32,Youtube premium,13.99
+2026-02-25 21:20,McDonalds lunch,10.76
+2026-02-26 09:00,Unknown wire transfer,920.0
+2026-02-26 11:00,Unknown wire transfer,840.0
+2026-02-26 13:15,Disney plus,13.99
+2026-02-26 13:35,Venmo transfer,76.46
+2026-02-26 17:34,Freelance payment,756.06
+2026-02-26 19:20,Parking garage,13.74
+2026-02-27 10:00,Unknown wire transfer,760.0
+2026-02-27 16:49,Costco,192.98
+2026-02-27 19:57,Best buy,121.95
+2026-02-27 22:20,Lyft ride,20.35
+2026-03-01 22:10,Offshore casino payment,500.0
+2026-03-05 02:30,International wire,2400.0
