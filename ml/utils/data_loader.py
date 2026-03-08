@@ -5,22 +5,23 @@ from datasets import load_dataset
 def load_training_data():
     print("Loading transaction data from Hugging Face...")
     try:
-        dataset = load_dataset("mitulshah/transaction-categorization", split="train[:5000]")
-        df = dataset.to_pandas()
-        df.columns = df.columns.str.strip().str.lower()
+        dataset = load_dataset("mitulshah/transaction-categorization", split="train[:20000]")
+        hf_df = dataset.to_pandas()
+        hf_df.columns = hf_df.columns.str.strip().str.lower()
 
-        desc_col = next((c for c in df.columns if 'desc' in c or 'transaction' in c or 'name' in c), None)
-        cat_col  = next((c for c in df.columns if 'cat' in c or 'label' in c or 'type' in c), None)
+        desc_col = next((c for c in hf_df.columns if 'desc' in c or 'transaction' in c or 'name' in c), None)
+        cat_col  = next((c for c in hf_df.columns if 'cat' in c or 'label' in c or 'type' in c), None)
 
         if not desc_col or not cat_col:
-            raise ValueError(f"Could not detect columns. Available: {list(df.columns)}")
+            raise ValueError(f"Could not detect columns. Available: {list(hf_df.columns)}")
 
-        df = df.rename(columns={desc_col: 'description', cat_col: 'category'})
-        df = df[['description', 'category']].dropna()
-        df['description'] = df['description'].astype(str).str.lower().str.strip()
+        hf_df = hf_df.rename(columns={desc_col: 'description', cat_col: 'category'})
+        hf_df = hf_df[['description', 'category']].dropna()
+        hf_df['description'] = hf_df['description'].astype(str).str.lower().str.strip()
 
-        print(f"Loaded {len(df)} rows across {df['category'].nunique()} categories")
-        return df
+        combined = pd.concat([hf_df, _fallback()], ignore_index=True)
+        print(f"Loaded {len(combined)} rows across {combined['category'].nunique()} categories")
+        return combined
 
     except Exception as e:
         print(f"Hugging Face load failed: {e}. Falling back to built-in data...")
@@ -59,13 +60,14 @@ def _fallback():
             "disney plus subscription", "youtube premium subscription"
         ],
         "Shopping & Retail": [
-            "walmart", "target", "amazon purchase", "ebay", "best buy",
+            "walmart", "target", "target store", "target purchase", "target red card",
+            "target run", "target order", "amazon purchase", "ebay", "best buy",
             "costco", "sams club", "home depot", "lowes", "ikea",
             "zara", "hm clothing", "gap store", "old navy", "uniqlo",
             "nordstrom", "macys", "kohls", "tjmaxx", "marshalls",
             "etsy purchase", "shein", "zappos shoes", "nike store",
             "adidas", "foot locker", "dick sporting goods", "rei outdoor",
-            "amazon prime", "target store", "best buy electronics"
+            "amazon prime", "best buy electronics", "target.com"
         ],
         "Healthcare & Medical": [
             "cvs pharmacy", "walgreens prescription", "rite aid", "hospital bill",
@@ -76,15 +78,20 @@ def _fallback():
             "orange theory", "crunch fitness", "walgreens", "cvs"
         ],
         "Utilities & Services": [
-            "rent payment", "mortgage payment", "electric bill", "gas utility",
-            "water utility", "internet service", "comcast", "verizon fios",
-            "att internet", "spectrum cable", "property tax", "renters insurance",
-            "home insurance", "maintenance repair", "plumber service",
-            "electrician", "pest control", "lawn service", "storage unit",
-            "adobe creative", "microsoft 365", "dropbox", "slack", "zoom",
-            "apple icloud", "linkedin premium", "audible", "kindle",
-            "verizon bill", "comcast internet", "electric bill payment",
-            "monthly rent", "rent", "utilities"
+            "electric bill", "gas utility", "water utility", "internet service",
+            "comcast", "verizon fios", "att internet", "spectrum cable",
+            "renters insurance", "home insurance", "maintenance repair",
+            "plumber service", "electrician", "pest control", "lawn service",
+            "storage unit", "adobe creative", "microsoft 365", "dropbox",
+            "slack", "zoom", "apple icloud", "linkedin premium", "audible",
+            "kindle", "verizon bill", "comcast internet", "electric bill payment",
+            "utilities"
+        ],
+        "Rent & Mortgage": [
+            "rent payment", "monthly rent", "rent", "apartment rent",
+            "rent check", "rental payment", "rent due", "house rent",
+            "mortgage payment", "home mortgage", "mortgage", "mortgage due",
+            "property mortgage"
         ],
         "Financial Services": [
             "venmo transfer", "zelle payment", "paypal transfer", "cashapp send",
@@ -101,6 +108,12 @@ def _fallback():
             "refund credit", "reimbursement deposit", "rental income",
             "consulting fee", "side hustle payment", "venmo received",
             "direct deposit", "payroll deposit"
+        ],
+        "Gambling": [
+            "casino", "offshore casino", "offshore casino payment",
+            "gambling", "betting", "poker", "sports betting",
+            "draftkings", "fanduel", "bovada", "bet365",
+            "lottery ticket", "scratch ticket", "slot machine"
         ],
         "Charity & Donations": [
             "red cross donation", "gofundme", "patreon donation", "church offering",

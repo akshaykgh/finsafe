@@ -72,11 +72,13 @@ def predict():
 
         category_summary = (
             df[df['category'] != 'Income']
-            .groupby('category')['amount']
-            .sum().round(2).reset_index()
-            .rename(columns={'amount': 'total'})
+            .groupby('category')
+            .agg(total=('amount', 'sum'), avg_confidence=('category_confidence', 'mean'))
+            .round(2)
+            .reset_index()
             .to_dict(orient='records')
         )
+
 
         df['date_parsed'] = pd.to_datetime(df['date'], errors='coerce')
         df['week_label']  = df['date_parsed'].dt.strftime('Week %W')
