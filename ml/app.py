@@ -73,6 +73,12 @@ def predict():
             .to_dict(orient='records')
         )
 
+        drop_cols = [
+            'date_parsed', 'date_only', 'hour', 'hour_parsed',
+            'week', 'week_label', 'month', 'rolling_3day'
+        ]
+        df = df.drop(columns=[c for c in drop_cols if c in df.columns])
+
         return jsonify({
             "transactions":       df.fillna('').to_dict(orient='records'),
             "category_summary":   category_summary,
