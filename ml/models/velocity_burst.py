@@ -2,11 +2,11 @@ import pandas as pd
 
 
 def detect_velocity_burst(df):
+    df = df.copy()
     df['date_parsed'] = pd.to_datetime(df['date'], errors='coerce')
-    df = df.sort_values('date_parsed').copy()
+    df = df.sort_values('date_parsed')
 
-    # Exclude income from burst detection — paycheck days should not trigger alerts
-    spend_only = df[df['category'] != 'Income']['amount']
+    # Zero out Income transactions so paycheck days don't trigger burst alerts
     spend_series = df['amount'].where(df['category'] != 'Income', 0)
 
     df['rolling_3day'] = (
@@ -29,4 +29,3 @@ def detect_velocity_burst(df):
         axis=1
     )
     return df
-

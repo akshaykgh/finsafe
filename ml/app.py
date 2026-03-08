@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import pandas as pd
 
-from models.categorizer    import categorize_transactions, TRAINING_ROWS
+from models.categorizer    import categorize_transactions, get_training_rows
 from models.anomaly        import detect_anomalies
 from models.merchant_risk  import compute_merchant_risk
 from models.velocity_burst import detect_velocity_burst
@@ -13,13 +13,19 @@ from utils.health_score    import compute_health_score
 app = Flask(__name__)
 CORS(app)
 
+_MAX_TRANSACTIONS = 5_000
+_DROP_COLS = [
+    'date_parsed', 'date_only', 'hour', 'hour_parsed',
+    'week', 'week_label', 'month', 'rolling_3day', 'day_offset', 'week_bucket'
+]
+
 
 @app.route('/health', methods=['GET'])
 def health():
     return jsonify({
         "status":        "ok",
         "models":        "loaded",
-        "training_rows": TRAINING_ROWS
+        "training_rows": get_training_rows()
     })
 
 
@@ -30,12 +36,17 @@ def predict():
         if not data:
             return jsonify({"error": "No transactions provided"}), 400
 
+        if len(data) > _MAX_TRANSACTIONS:
+            return jsonify({
+                "error": f"Too many transactions. Max allowed: {_MAX_TRANSACTIONS}"
+            }), 400
+
         df = pd.DataFrame(data)
         df.columns = df.columns.str.lower().str.strip()
 
         missing = [c for c in ['description', 'amount'] if c not in df.columns]
         if missing:
-            return jsonify({"error": f"Missing columns: {missing}"}), 400
+            return jsonify({"error": f"Missing required columns: {missing}"}), 400
 
         df['amount'] = (
             df['amount'].astype(str)
@@ -46,11 +57,13 @@ def predict():
         if 'date' not in df.columns:
             df['date'] = pd.Timestamp.today()
 
+        # Core pipeline
         df = categorize_transactions(df)
         df = detect_anomalies(df)
         df = compute_merchant_risk(df)
         df = detect_velocity_burst(df)
 
+        # Aggregates
         drift_alerts    = detect_category_drift(df)
         forecast        = forecast_spending(df)
         anomalies_count = int(df['anomaly'].sum())
@@ -58,7 +71,8 @@ def predict():
         health_score    = compute_health_score(df, anomalies_count, drift_alerts, burst_count)
 
         category_summary = (
-            df.groupby('category')['amount']
+            df[df['category'] != 'Income']
+            .groupby('category')['amount']
             .sum().round(2).reset_index()
             .rename(columns={'amount': 'total'})
             .to_dict(orient='records')
@@ -73,14 +87,13 @@ def predict():
             .to_dict(orient='records')
         )
 
-        drop_cols = [
-            'date_parsed', 'date_only', 'hour', 'hour_parsed',
-            'week', 'week_label', 'month', 'rolling_3day'
-        ]
-        df = df.drop(columns=[c for c in drop_cols if c in df.columns])
+        df = df.drop(columns=[c for c in _DROP_COLS if c in df.columns])
+
+        # Replace NaN numerics with None (serializes to JSON null, not "")
+        df = df.where(pd.notna(df), other=None)
 
         return jsonify({
-            "transactions":       df.fillna('').to_dict(orient='records'),
+            "transactions":       df.to_dict(orient='records'),
             "category_summary":   category_summary,
             "weekly_spend":       weekly_spend,
             "forecast":           forecast,
